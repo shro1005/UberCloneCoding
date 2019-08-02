@@ -1,0 +1,41 @@
+{
+  "name": "uber_clone_coding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/shro1005/uberCloneCoding",
+  "author": "김연균 <shro1004@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/dotenv": "^6.1.1",
+    "@types/helmet": "^0.0.43",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^11.13.2",
+    "babel-runtime": "^6.26.0",
+    "gql-merge": "^0.0.6",
+    "graphql-to-typescript": "^0.1.2",
+    "nodemon": "^1.18.11",
+    "ts-node": "^8.0.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.2"
+  },
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
+    "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "create-react-app": "^3.0.1",
+    "dotenv": "^7.0.0",
+    "graphql": "^14.2.1",
+    "graphql-tools": "^4.0.4",
+    "graphql-upload": "^8.0.5",
+    "graphql-yoga": "^1.17.4",
+    "helmet": "^3.16.0",
+    "merge-graphql-schemas": "^1.5.8",
+    "morgan": "^1.9.1",
+    "pg": "^7.9.0",
+    "typeorm": "^0.2.16"
+  }
+}
